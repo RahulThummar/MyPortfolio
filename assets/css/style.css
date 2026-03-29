@@ -200,11 +200,29 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 0.5s;
   padding: 0 15px;
   background: #040b14;
   overflow-y: auto;
 }
+
+/* Custom Scrollbar Width and Style for Sidebar */
+#header::-webkit-scrollbar {
+  width: 6px;
+}
+
+#header::-webkit-scrollbar-track {
+  background: #040b14;
+}
+
+#header::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+#header::-webkit-scrollbar-thumb:hover {
+  background: #149ddd;
+}
+
 #header .profile img {
   margin: 15px auto;
   display: block;
