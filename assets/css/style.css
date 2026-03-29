@@ -222,7 +222,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header .profile h1 a, #header .profile h1 a:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
   -webkit-mask-size: 200%;
+  mask-size: 200%;
   animation: shine 2s infinite;
   color: #fff;
   text-decoration: none;
@@ -232,9 +234,21 @@ h1, h2, h3, h4, h5, h6 {
   from {
     -webkit-mask-position: 150%;
   }
-  
+
   to {
     -webkit-mask-position: -30%;
+  }
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+    mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -30%;
+    mask-position: -30%;
   }
 }
 
@@ -809,6 +823,46 @@ section {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Products
+--------------------------------------------------------------*/
+.products .icon-box {
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.products .icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(5, 13, 24, 0.1);
+}
+.products .icon {
+  margin-bottom: 15px;
+}
+.products .icon i {
+  color: #149ddd;
+  font-size: 44px;
+  line-height: 0;
+}
+.products .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.products .title a {
+  color: #343a40;
+  transition: 0.3s;
+}
+.products .title a:hover {
+  color: #149ddd;
+}
+.products .description {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
